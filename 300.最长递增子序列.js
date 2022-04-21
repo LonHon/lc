@@ -27,6 +27,14 @@ var lengthOfLIS_plain = function(nums) {
 };
 
 // DP + 二分
+/**
+ 如序列是78912345，前三个遍历完以后tail是789，
+ 这时候遍历到1，就得把1放到合适的位置，
+ 于是在tail二分查找1的位置，变成了189（如果序列在此时结束，因为res不变，所以依旧输出3），
+ 再遍历到2成为129，然后是123直到12345
+ * https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/
+ * 
+ */
 var lengthOfLIS = function(nums) {
   const tails = new Array(nums.length)
   let res = 0;
