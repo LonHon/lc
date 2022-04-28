@@ -55,16 +55,3 @@ Array.prototype.__reduce = function (fn, initialValue) {
   }
   return res;
 }
-// console.log([1,2,3,4].__reduce((prev, now) => prev+now)) // 11
-// console.log(['a', 1].reduce((prev, now) => {
-//   console.log(prev)
-//   return prev+now
-// })) // 11
-// arr.__concat()
-// arr.__reduceRight(callback, initialValue)
-// arr.__lastIndexOf()
-// arr.__copyWithin()
-// arr.__find(callback)
-// arr.__findIndex(callback)
-// arr.__fill(target, start, end)
-// arr.__at(index)
