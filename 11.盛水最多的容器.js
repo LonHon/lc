@@ -7,8 +7,10 @@
   //  双指针
   let res = 0, left = 0, right = height.length -1;
   while (left < right) {
+    // 当前能盛水的面积：长*宽
       const waters = Math.min(height[left], height[right]) * (right - left);
       res = Math.max(res, waters)
+    // 小的一侧往中间缩进
       if (height[left] >= height[right]) {
           right--;
       } else {
